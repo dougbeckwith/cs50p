@@ -1,6 +1,6 @@
-# CS50p Problem Sets
+# CS50’s Introduction to Programming with Python
 
-This repository contains problem sets for the CS50p course.
+This repository contains problem sets for the CS50’s Introduction to Programming with Python course.
 
 - Each problem set is organized into individual directories.
 - Within each problem set, you'll find directories for each problem.
