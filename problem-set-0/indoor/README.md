@@ -11,14 +11,14 @@ To run this program on your local machine, you need to have Python installed. If
 1. Clone this repository to your local machine or download the script directly.
 
 ```bash
-$ git clone https://github.com/yourusername/user-input-to-lowercase.git
-$ cd user-input-to-lowercase
+$ git clone https://github.com/dougbeckwith/cs50p.git
+$ cd cs50p/problem-set-0/indoor
 ```
 
 2. Run the script using your preferred Python interpreter.
 
 ```bash
-$ python user_input_converter.py
+$ python indoor.py
 ```
 
 3. Enter the text when prompted. The program will convert the text to lowercase and display the result on the terminal.
@@ -26,7 +26,7 @@ $ python user_input_converter.py
 ## Example
 
 ```bash
-$ python user_input_converter.py
+$ python indoor.py
 Enter text: Hello, World!
 hello, world!
 ```
