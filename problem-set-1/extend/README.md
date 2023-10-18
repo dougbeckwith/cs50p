@@ -7,7 +7,7 @@ The File Media Type Detector is a Python program that allows you to determine th
 1. Run the program by executing it with a Python interpreter.
 
    ```bash
-   python extension.py
+   python extensions.py
    ```
 
 2. Enter the name of the file for which you want to determine the media type.
