@@ -7,7 +7,7 @@ This Python script prompts the user to answer the ultimate question of life, the
 1. Run the script by executing it with a Python interpreter.
 
    ```bash
-   python life_universe_everything.py
+   python deep.py
    ```
 
 2. Enter your answer when prompted.
