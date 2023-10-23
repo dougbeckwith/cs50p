@@ -12,14 +12,14 @@ The **Fraction to Percentage Converter** is a Python program designed to convert
 
 2. **Navigate to the Directory**:
 
-   Open a terminal and navigate to the directory containing the Python script (`fraction_to_percentage.py`) using the `cd` command.
+   Open a terminal and navigate to the directory containing the Python script (`fuel.py`) using the `cd` command.
 
 3. **Run the Program**:
 
    Execute the following command to run the program:
 
    ```bash
-   python fraction_to_percentage.py
+   python fuel.py
    ```
 
 4. **Input Fraction**:
