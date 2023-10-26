@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    difficulty_level = get_level() # Get the desired difficulty level.
+    difficulty_level = get_level()  # Get the desired difficulty level.
     correct_answers_count = 0
 
     # Create and ask user 10 addition problems based on level.
@@ -34,6 +34,7 @@ def main():
                     continue
     print(f"Score: {correct_answers_count}")
     sys.exit()
+
 
 # Function to prompt the user for the difficulty level (1, 2, or 3).
 def get_level():
