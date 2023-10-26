@@ -1,67 +1,62 @@
 import random
-
-math_problems = []
+import sys
 
 
 def main():
-    level = get_level()
+    difficulty_level = get_level() # Get the desired difficulty level.
+    correct_answers_count = 0
 
-    # Create 10 math problems
+    # Create and ask user 10 addition problems based on level.
     for _ in range(10):
-        x = generate_integer(level)
-        y = generate_integer(level)
-        a = x + y
-        math_problems.append({"x": x, "y": y, "a": a})
-
-    
-    # Prompt user to answer each math problem and keep track of correct answers with score
-    score = 0
-    for problem in math_problems:
-        tries = 0
-        # Continue to prompt user for answer for each probem (max of 3 tries).
+        attempts = 0
+        num1 = generate_integer(difficulty_level)
+        num2 = generate_integer(difficulty_level)
+        correct_answer = num1 + num2
+        # Continue to prompt user for answer for each probem (max of 3 attempts).
         while True:
-            answer = input(f"{problem['x']} + {problem['y']} = ")
-            tries += 1
+            answer = input(f"{num1} + {num2} = ")
+            attempts += 1
             try:
                 answer = int(answer)
             except ValueError:
                 pass
             else:
-                if answer == problem["a"]:
-                    score += 1
+                if answer == correct_answer:
+                    correct_answers_count += 1
                     break
-                # Print answer to user and move onto next problem
-                elif tries >= 3:
+                # If the user fails to answer correctly after 3 attempts, print the correct answer and move to the next problem.
+                elif attempts >= 3:
                     print("EEE")
-                    print(f"{problem['x']} + {problem['y']} = {problem['a']}")
+                    print(f"{num1} + {num2} = {correct_answer}")
                     break
                 else:
                     print("EEE")
                     continue
-    print(f"Score: {score}")
+    print(f"Score: {correct_answers_count}")
+    sys.exit()
 
-# Continues to prompt user for level until 1,2 or 3 is chosen.
+# Function to prompt the user for the difficulty level (1, 2, or 3).
 def get_level():
     while True:
         try:
-            level_choice = int(input("Level: "))
+            selected_level = int(input("Level: "))
         except ValueError:
             pass
         else:
-            if level_choice < 1 or level_choice > 3:
+            if selected_level < 1 or selected_level > 3:
                 continue
             else:
-                return level_choice
+                return selected_level
 
 
-# returns level digits or raises a Value Error if level is not 1,2 or 3
-def generate_integer(level):
-    if level == 1:
-        return random.randrange(0, 9)
-    elif level == 2:
-        return random.randrange(10, 99)
+# Generate random integers based on the selected difficulty level (1, 2, or 3).
+def generate_integer(difficulty_level):
+    if difficulty_level == 1:
+        return random.randint(0, 9)
+    elif difficulty_level == 2:
+        return random.randint(10, 99)
     else:
-        return random.randrange(100, 999)
+        return random.randint(100, 999)
 
 
 if __name__ == "__main__":
